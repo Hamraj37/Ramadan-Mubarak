@@ -1,4 +1,4 @@
-var countDownDate = new Date("Mar 22, 2023 00:00:00").getTime();
+var countDownDate = new Date("Feb 7, 2025 00:00:00").getTime();
 var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;
@@ -10,8 +10,11 @@ var x = setInterval(function() {
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
-    // if (distance < 0) {
-    // 	clearInterval(x);
-    // 	document.getElementById("count").innerHTML = "Happy New Year 2024!";
-    // }
+     if (distance < 0) {
+     clearInterval(x);
+     document.getElementById("d-flex")
+     	document.getElementById("count").innerHTML = "Eid Mubarak";     	
+     }else{
+     	document.getElementById("count").innerHTML = "Ramadhan Mubarak";
+     	} 
 }, 1000);
